@@ -9,7 +9,6 @@ import time
 import json
 import random
 import statistics
-import pickle
 
 import numpy as np
 import torch as th
@@ -67,7 +66,7 @@ def test_model(config_path, checkpoint_path, gumbel_tau, _run, _log):
                                                               emb_cache=pretrain_emb_cache,
                                                               max_vectors=pretrain_emb_max_vectors,
                                                               yelp_senti_feature=yelp_senti_feat)
-    train_iter = DataLoader(train_set, batch_size=batch_size, shuffle=False, collate_fn=collate_fn)
+    # train_iter = DataLoader(train_set, batch_size=batch_size, shuffle=False, collate_fn=collate_fn)
     test_iter = DataLoader(test_set, batch_size=batch_size, shuffle=False, collate_fn=collate_fn)
     _log.info('[%s] Load train, val, test sets Done, len=%d,%d,%d' % (time.ctime(),
               len(train_set), len(val_set), len(test_set)))
@@ -147,7 +146,7 @@ def test_model(config_path, checkpoint_path, gumbel_tau, _run, _log):
             all_gold.extend(labels.detach().tolist())
             all_pred.extend(th.argmax(pred, dim=1).detach().tolist())
     acc = (th.LongTensor(all_gold) == th.LongTensor(all_pred)).sum() / len(all_pred)
-    _log.info('[%s] acc=%.2f, ' % (time.ctime(), acc*100))
-    if opt['gpt_grnn_variant'] in ['variable', 'neigh-var']:
-        _log.info('generated node cnt avg=%.3f, stdev=%.3f' % (statistics.mean(val_node_cnts),
-                                                               statistics.pstdev(val_node_cnts)))
+    _log.info('[%s] test acc=%.2f, ' % (time.ctime(), acc*100))
+    # if opt['gpt_grnn_variant'] in ['variable', 'neigh-var']:
+    #     _log.info('generated node cnt avg=%.3f, stdev=%.3f' % (statistics.mean(val_node_cnts),
+    #                                                            statistics.pstdev(val_node_cnts)))
