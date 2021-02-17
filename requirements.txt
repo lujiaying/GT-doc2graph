@@ -1,0 +1,9 @@
+allennlp==1.1.0
+allennlp-models==1.1.0
+torch==1.7.0
+torchtext==0.8.0a0+cd6902d
+sacred==0.8.1
+dgl-cu101==0.5.2
+networkx==2.5
+numpy==1.19.2
+tqdm>=4.51.0
