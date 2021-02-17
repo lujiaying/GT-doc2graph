@@ -4,9 +4,9 @@
 
 This is the codebase for reproducing results of KDD'2021 submission: "Weakly Supervised Concept Map Generation through Task-Guided Graph Translation".
 
-![Proposed Framework](imgs/)
+![Proposed Framework](imgs/GT-D2G_framework.png)
 
-![Graph Translator](imgs/)
+![Graph Translator](imgs/Graph_Translator.png)
 
 ## Prerequisites
 
