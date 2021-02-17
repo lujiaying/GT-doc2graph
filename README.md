@@ -52,7 +52,7 @@ The expected `./.vector_cache` folder:
 
 **Checkpoints**
 
-- `GT-D2G-path`:
+- `GT-D2G-path`:  https://figshare.com/s/ca95d8eeffe721443475
 - `GT-D2G-neigh`: https://figshare.com/s/087968738807de17d154
 - `GT-D2G-var`:   https://figshare.com/s/1bea7883754b4fce3b7f
 
