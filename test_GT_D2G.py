@@ -75,17 +75,17 @@ def test_model(config_path, checkpoint_path, gumbel_tau, _run, _log):
     pretrained_emb = vocab.vectors
     gcn_encoder = GCNEncoder(pretrained_emb, pretrained_emb.shape[1]+3, opt['gcn_encoder_hidden_size'],
                              gcn_encoder_pooling, yelp_senti_feat, pretrain_emb_dropout)
-    if opt['gpt_grnn_variant'] == 'simple':
+    if opt['gpt_grnn_variant'] == 'neigh':
         gptrnn_decoder = GPTGRNNDecoderS(opt['gcn_encoder_hidden_size'], opt['GPT_attention_unit'],
                                          opt['max_out_node_size'], gumbel_tau)
-    elif opt['gpt_grnn_variant'] == 'complete':
+    elif opt['gpt_grnn_variant'] == 'path':
         gptrnn_decoder = GPTGRNNDecoder(opt['gcn_encoder_hidden_size'], opt['GPT_attention_unit'],
                                         opt['max_out_node_size'], opt['graph_rnn_num_layers'],
                                         opt['graph_rnn_hidden_size'], opt['edge_rnn_num_layers'],
                                         opt['edge_rnn_hidden_size'],
                                         gumbel_tau, opt['gptrnn_decoder_dropout']
                                         )
-    elif opt['gpt_grnn_variant'] == 'variable':
+    elif opt['gpt_grnn_variant'] == 'path-var':
         gptrnn_decoder = GPTGRNNDecoderVariable(opt['gcn_encoder_hidden_size'], opt['GPT_attention_unit'],
                                                 opt['max_out_node_size'], opt['graph_rnn_num_layers'],
                                                 opt['graph_rnn_hidden_size'], opt['edge_rnn_num_layers'],
@@ -99,7 +99,7 @@ def test_model(config_path, checkpoint_path, gumbel_tau, _run, _log):
                                             opt['gptrnn_decoder_dropout']
                                             )
     else:
-        _log.error('invalid gpt_grnn_variant=%s, expected "simple"|"complete"')
+        _log.error('invalid gpt_grnn_variant=%s, expected "neigh"|"path"')
         exit(-1)
     gcn_classifier = GraphClassifier(opt['gcn_encoder_hidden_size'], opt['gcn_classifier_hidden_size'],
                                      n_labels)

@@ -26,7 +26,7 @@ Put it under the project root directory and decompress it. Then three `*.pickle.
 The expected `./data` folder after downloading necessary resources:
 ```
 ./data
-|-- dblp.txt
+|-- dblp.txt     # dblp refer to AMiner corpus used in paper
 |-- dblp.win5.pickle.gz
 |-- nyt.txt
 |-- nyt.win5.pickle.gz
@@ -57,3 +57,5 @@ The expected `./.vector_cache` folder:
 - `GT-D2G-var`: https://figshare.com/s/1bea7883754b4fce3b7f
 
 Please download gziped checkpoint files using the above urls, and decompress them under `./checkpoints` folder.
+
+Example of running GT-D2G for reproducibility: `sh run_test.sh`.
