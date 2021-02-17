@@ -53,8 +53,8 @@ The expected `./.vector_cache` folder:
 **Checkpoints**
 
 - `GT-D2G-path`:
-- `GT-D2G-neigh`:
-- `GT-D2G-var`: https://figshare.com/s/1bea7883754b4fce3b7f
+- `GT-D2G-neigh`: https://figshare.com/s/087968738807de17d154
+- `GT-D2G-var`:   https://figshare.com/s/1bea7883754b4fce3b7f
 
 Please download gziped checkpoint files using the above urls, and decompress them under `./checkpoints` folder.
 
