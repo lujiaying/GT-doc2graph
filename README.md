@@ -59,3 +59,7 @@ The expected `./.vector_cache` folder:
 Please download gziped checkpoint files using the above urls, and decompress them under `./checkpoints` folder.
 
 Example of running GT-D2G for reproducibility: `sh run_test.sh`.
+
+## Training
+
+You can train your own GT-D2G by modifying provided examples `run_train.sh`.
