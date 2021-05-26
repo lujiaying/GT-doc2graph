@@ -1,8 +1,18 @@
 # Weakly Supervised Concept Map Generation through Task-Guided Graph Translation
+=============================
 
-## GT-D2G
+- [GT-D2G Model](#gt-d2g-model)
+- [Prerequisites](#prerequisites)
+- [Data](#data)
+- [Reproduce Classification Results](#reproduce-classification-results)
+- [Training](#training)
+- [Case Study](#case-study)
 
-This is the codebase for reproducing results of KDD'2021 submission: "Weakly Supervised Concept Map Generation through Task-Guided Graph Translation".
+----------------------------------
+
+## GT-D2G Model
+
+This is the codebase for reproducing results of CIKM'2021 submission: "Weakly Supervised Concept Map Generation through Task-Guided Graph Translation".
 
 ![Proposed Framework](imgs/GT-D2G_framework.png)
 
@@ -63,3 +73,5 @@ Example of running GT-D2G for reproducibility: `sh run_test.sh`.
 ## Training
 
 You can train your own GT-D2G by modifying provided examples `run_train.sh`.
+
+## Case Study
