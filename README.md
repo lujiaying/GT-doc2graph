@@ -1,5 +1,4 @@
 # Weakly Supervised Concept Map Generation through Task-Guided Graph Translation
-=============================
 
 - [GT-D2G Model](#gt-d2g-model)
 - [Prerequisites](#prerequisites)
@@ -75,3 +74,11 @@ Example of running GT-D2G for reproducibility: `sh run_test.sh`.
 You can train your own GT-D2G by modifying provided examples `run_train.sh`.
 
 ## Case Study
+
+![NYT1](imgs/case_study/NYT1.png)
+
+![NYT2](imgs/case_study/NYT2.png)
+
+![YELP1](imgs/case_study/YELP1.png)
+
+![DBLP1](imgs/case_study/DBLP1.png)
