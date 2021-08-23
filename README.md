@@ -29,7 +29,7 @@ For library requirements, please refer to `./requirements.txt`. (You may replace
 
 **Pre-processed Graphs**
 
-The NLP pipeline derived initial concept maps are available at https://figshare.com/s/e85a87db24d01a245e93.    
+The NLP pipeline derived initial concept maps are available at [NYT link](https://figshare.com/s/9dc0d4124af2308bc388?file=30419205), [DBLP link](https://figshare.com/s/9dc0d4124af2308bc388?file=30419211), [YELP link](https://figshare.com/s/9dc0d4124af2308bc388?file=30419214).   
 Put it under the project root directory and decompress it. Then three `*.pickle.gz` files would reside under `./data/`. (No need to decompress *.pickle.gz files)
 
 The expected `./data` folder after downloading necessary resources:
@@ -48,7 +48,7 @@ The expected `./data` folder after downloading necessary resources:
 
 *GT-D2G* relies on several pre-trained word embeddings. By default, the scripts read pre-trained embeddings from `./.vector_cache` folder.  
 - GloVe for *NYT*, *AMiner*: Download `glove.840B.300d` from https://nlp.stanford.edu/projects/glove/.
-- Customed emb for *Yelp*: For yelp dataset, we get the best performan using a hybrid of GloVe and [restaurant embedding](https://howardhsu.github.io/dataset/), which can be download from https://figshare.com/s/3eb1271fef804e9ab8fe.
+- Customed emb for *Yelp*: For yelp dataset, we get the best performan using a hybrid of GloVe and [restaurant embedding](https://howardhsu.github.io/dataset/), which can be download from [link](https://figshare.com/s/9dc0d4124af2308bc388?file=30419202).
 
 The expected `./.vector_cache` folder:
 ```
@@ -61,9 +61,9 @@ The expected `./.vector_cache` folder:
 
 **Checkpoints**
 
-- `GT-D2G-path`:  https://figshare.com/s/ca95d8eeffe721443475
-- `GT-D2G-neigh`: https://figshare.com/s/087968738807de17d154
-- `GT-D2G-var`:   https://figshare.com/s/1bea7883754b4fce3b7f
+- `GT-D2G-path`:  https://figshare.com/s/9dc0d4124af2308bc388?file=30419121
+- `GT-D2G-neigh`: https://figshare.com/s/9dc0d4124af2308bc388?file=30419181
+- `GT-D2G-var`:   https://figshare.com/s/9dc0d4124af2308bc388?file=30419157
 
 Please download gziped checkpoint files using the above urls, and decompress them under `./checkpoints` folder.
 
