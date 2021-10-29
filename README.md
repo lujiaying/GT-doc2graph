@@ -11,7 +11,7 @@
 
 ## GT-D2G Model
 
-This is the codebase for reproducing results of CIKM'2021 submission: "Weakly Supervised Concept Map Generation through Task-Guided Graph Translation".
+This is the codebase for reproducing results of TKDE submission: "Weakly Supervised Concept Map Generation through Task-Guided Graph Translation".
 
 ![Proposed Framework](imgs/GT-D2G_framework.png)
 
